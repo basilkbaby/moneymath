@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1, h2, h3, p {
+  margin: 0 0 10px;
+}
+
+input, select {
+  padding: 8px;
+  margin: 5px 0 15px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+}
+
+
+
+/* Global Styles */
+:root {
+  --primary-color: #0052ff;
+  --primary-light: #f0f5ff;
+  --text-dark: #212529;
+  --text-medium: #495057;
+  --text-light: #6c757d;
+  --border-color: #e9ecef;
+  --background-light: #f8f9fa;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-medium);
+  margin: 0;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

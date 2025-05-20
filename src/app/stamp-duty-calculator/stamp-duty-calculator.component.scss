@@ -1,0 +1,250 @@
+.calculator-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator-card {
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.calculator-section {
+  flex: 1;
+  padding: 2rem;
+  border-right: 1px solid #f0f0f0;
+}
+
+.graph-section {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; // Important for flex containment
+}
+
+.graph-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; // Important for flex containment
+}
+
+
+.graph-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.placeholder-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 300px; // Fixed height
+  width: 100%;
+  min-height: 0; // Important for flex containment
+  
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  color: #dee2e6;
+  margin-bottom: 1rem;
+}
+
+.calculator-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.graph-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.input-field, .select-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: all 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #0052ff;
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(0, 82, 255, 0.1);
+  }
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #0052ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #003bb5;
+  }
+}
+
+.result-section {
+  margin-top: 2rem;
+}
+
+.total-duty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.total-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0052ff;
+}
+
+.breakdown-section {
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.breakdown-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.breakdown-list {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.band-label {
+  color: #495057;
+}
+
+.band-amount {
+  font-weight: 500;
+  color: #212529;
+}
+
+.info-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #212529;
+  }
+
+  p {
+    color: #495057;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #495057;
+    }
+  }
+}
+
+.info-link {
+  color: #0052ff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calculator-card {
+    flex-direction: column;
+  }
+
+  .calculator-section {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}

@@ -1,0 +1,71 @@
+<div class="calculator-container">
+  <div class="calculator-card">
+    <div class="calculator-section">
+      <h2 class="calculator-title">Stamp Duty Calculator</h2>
+
+      <div class="input-group">
+        <label for="price">Property Price (£)</label>
+        <input id="price" type="number" [(ngModel)]="propertyPrice" class="input-field" placeholder="Enter property value">
+      </div>
+
+      <div class="input-group">
+        <label for="type">Buyer Type</label>
+        <select id="type" [(ngModel)]="buyerType" class="select-field">
+          <option value="first-time">First-Time Buyer</option>
+          <option value="previous-owner">Previous Owner</option>
+          <option value="additional-property">Additional Property</option>
+          <option value="company">Company / Non-Individual Buyer</option>
+        </select>
+      </div>
+
+      <button class="calculate-btn" (click)="calculateStampDuty()">Calculate Stamp Duty</button>
+
+      <div *ngIf="stampDuty !== null" class="result-section">
+        <div class="total-duty">
+          <span class="total-label">Total Stamp Duty:</span>
+          <span class="total-amount">£{{ stampDuty | number:'1.2-2' }}</span>
+        </div>
+
+        <div class="breakdown-section">
+          <h3 class="breakdown-title">Breakdown</h3>
+          <div class="breakdown-list">
+            <div *ngFor="let band of breakdown" class="breakdown-item">
+              <span class="band-label">{{ band.label }}</span>
+              <span class="band-amount">£{{ band.amount | number:'1.2-2' }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="graph-section">
+      <div class="graph-container" *ngIf="stampDuty !== null">
+        <h3 class="graph-title">Stamp Duty Breakdown</h3>
+        <div class="chart-wrapper">
+          <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="barChartType">
+          </canvas>
+        </div>
+      </div>
+      <div class="graph-placeholder" *ngIf="stampDuty === null">
+        <div class="placeholder-content">
+          <mat-icon class="placeholder-icon">insert_chart</mat-icon>
+          <p>Enter property details to see stamp duty visualization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h3>About Stamp Duty</h3>
+    <p>Stamp Duty Land Tax (SDLT) is payable on property purchases over certain thresholds in England and Northern Ireland.</p>
+    <ul>
+      <li><strong>First-time buyers</strong> get relief up to £425,000.</li>
+      <li><strong>Additional properties</strong> are subject to a 3% surcharge.</li>
+      <li><strong>Companies</strong> may pay a 15% flat rate if buying residential property over £500,000.</li>
+    </ul>
+    <a href="https://www.gov.uk/stamp-duty-land-tax" target="_blank" class="info-link">Read full SDLT guidance →</a>
+  </div>
+</div>

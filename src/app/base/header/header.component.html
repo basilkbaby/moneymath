@@ -1,0 +1,19 @@
+<header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/logo.jpg" alt="Financial Calculators Logo" class="logo" width="150">
+        </div>
+        <nav>
+          <ul>
+            <li><a routerLink="/" [class.active]="isActive('/')">Home</a></li>
+            <li><a routerLink="/stamp-duty-calculator" [class.active]="isActive('/stamp-duty-calculator')">Stamp Duty</a></li>
+            <li><a routerLink="/mortgage-calculator" [class.active]="isActive('/mortgage-calculator')">Mortgage</a></li>
+            <li><a routerLink="/loan-calculator" [class.active]="isActive('/loan-calculator')">Loan</a></li>
+            <li><a routerLink="/savings-calculator" [class.active]="isActive('/savings-calculator')">Savings</a></li>
+            <li><a routerLink="/about" [class.active]="isActive('/about')">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
