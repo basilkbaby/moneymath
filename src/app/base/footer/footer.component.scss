@@ -60,4 +60,34 @@
       color: #6c757d;
       font-size: 0.85rem;
     }
+
+    .logo-text {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.logo-text .money {
+  color: #0052ff;
+  font-weight: 700;
+  padding-bottom: 2px;
+}
+.logo-text .plus {
+  color: #00aaff;
+  font-size: 1.1rem;
+  margin: 0 2px;
+  position: relative;
+  top: -1px;
+  opacity: 1;
+  transform: scale(1);
+}
+.logo-text .math {
+  color: #212529;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
   }
