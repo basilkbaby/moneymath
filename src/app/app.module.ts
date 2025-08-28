@@ -13,6 +13,9 @@ import { Chart, registerables } from 'chart.js';
 import { MatIconModule } from '@angular/material/icon'
 import { HeaderComponent } from './base/header/header.component';
 import { FooterComponent } from './base/footer/footer.component';
+import { InfoComponent } from './stamp-duty-calculator/info/info.component';
+import { BreakdownComponent } from './stamp-duty-calculator/breakdown/breakdown.component';
+import { StampDutyCalculatorModule } from './stamp-duty-calculator/stamp-duty-calculator.module';
 
 Chart.register(...registerables);
 
@@ -22,21 +25,17 @@ Chart.register(...registerables);
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    StampDutyCalculatorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    MatIconModule,
     BrowserAnimationsModule,
-    BaseChartDirective,
-    
+    StampDutyCalculatorModule
   ],
-  providers: [provideHttpClient(),
-    
-    provideCharts(withDefaultRegisterables())
+  providers: [
+    provideHttpClient()
   ],
   bootstrap: [AppComponent], // Bootstrap starts with AppComponent
 })

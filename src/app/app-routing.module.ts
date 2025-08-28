@@ -5,8 +5,10 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'stamp-duty-calculator', component: StampDutyCalculatorComponent },
-  // Add future calculators here
+  {
+    path: 'stamp-duty-calculator',
+    loadChildren: () => import('./stamp-duty-calculator/stamp-duty-calculator.module').then(m => m.StampDutyCalculatorModule)
+  },
   { path: '**', redirectTo: '' }, // Redirect unknown routes to home
 ];
 

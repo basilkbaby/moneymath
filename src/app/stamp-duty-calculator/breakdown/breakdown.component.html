@@ -1,0 +1,9 @@
+<div class="breakdown-section">
+  <h3 class="breakdown-title">Breakdown</h3>
+  <div class="breakdown-list">
+    <div *ngFor="let band of breakdown" class="breakdown-item">
+      <span class="band-label">{{ band.label }}</span>
+      <span class="band-amount">£{{ band.amount | number:'1.2-2' }}</span>
+    </div>
+  </div>
+</div>

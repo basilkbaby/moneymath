@@ -1,0 +1,29 @@
+
+.breakdown-section {
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.breakdown-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.breakdown-list {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
