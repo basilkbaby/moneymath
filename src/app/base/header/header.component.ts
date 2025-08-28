@@ -7,9 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  animate = false;
+
+  
   constructor(private router: Router) {}
 
   isActive(route: string): boolean {
     return this.router.url === route;
   }
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.animate = true;
+    }, 100);
+  }
+  
 }
